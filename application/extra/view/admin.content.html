@@ -1,0 +1,19 @@
+<div class="ibox">
+    {block name="style"}{/block}
+    {if isset($title)}
+    <div class="ibox-title notselect">
+        <h5>{$title}</h5>
+        {block name="button"}{/block}
+    </div>
+    {/if}
+    <div class="ibox-content">
+        {if isset($alert)}
+        <blockquote class="layui-elem-quote">
+            {if isset($alert['title'])}<p style="font-size:18px;padding-bottom:10px">{$alert.title}</p>{/if}
+            {if isset($alert['content'])}<p style="font-size:14px">{$alert.content}</p>{/if}
+        </blockquote>
+        {/if}
+        {block name="content"}{/block}
+    </div>
+    {block name='script'}{/block}
+</div>

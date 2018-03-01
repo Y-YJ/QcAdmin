@@ -1,0 +1,17 @@
+{extend name="extra@admin/main"}
+
+{block name='body'}
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    {include file="extra@admin/main/top"}
+    <div class="framework-body framework-sidebar-mini">
+        {include file="extra@admin/main/left"}
+        <div class="framework-container layui-body"></div>
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            © 技术支持-成都巨硬蹬灵科技有限公司
+        </div>
+    </div>
+</div>
+</body>
+{/block}

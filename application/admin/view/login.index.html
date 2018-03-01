@@ -1,0 +1,49 @@
+{extend name="extra@admin/main"}
+
+{block name="style"}
+<link rel="stylesheet" href="__STATIC__/theme/default/css/login.css">
+{/block}
+
+{block name="body"}
+<body class="login-bg">
+    <div class="login">
+        <div class="message">{:sysconf('app_name')} 后台管理-{:sysconf('app_version')}</div>
+        <div id="darkbannerwrap"></div>
+
+        <form onsubmit="return false;" data-time="0.001" data-auto="true"  method="post" class="layui-form" >
+            <input required="required" pattern="^\S{4,}$" value="admin" name="username"
+                   autofocus="autofocus" autocomplete="off" class=" layui-input username"
+                   title="请输入4位及以上的字符" placeholder="请输入用户名/手机号码" >
+            <hr class="hr15">
+            <input required="required" pattern="^\S{4,}$" value="admin" name="password"
+                   type="password" autocomplete="off" class="layui-input password"
+                   title="请输入4位及以上的字符" placeholder="请输入密码">
+            <hr class="hr15">
+            <input class="loginin" value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
+            <hr class="hr20" >
+            <div>
+                {if sysconf('site_copy')}
+                {:sysconf('site_copy')}
+                {/if}
+            </div>
+        </form>
+    </div>
+</body>
+{/block}
+
+{block name="script"}
+<script>
+    if (window.location.href.indexOf('#') > -1) {
+        window.location.href = window.location.href.split('#')[0];
+    }
+    require(['jquery'], function ($) {
+        $('[name="password"]').on('focus', function () {
+            $('#left-hander').removeClass('initial_left_hand').addClass('left_hand');
+            $('#right-hander').removeClass('initial_right_hand').addClass('right_hand')
+        }).on('blur', function () {
+            $('#left-hander').addClass('initial_left_hand').removeClass('left_hand');
+            $('#right-hander').addClass('initial_right_hand').removeClass('right_hand')
+        });
+    });
+</script>
+{/block}
