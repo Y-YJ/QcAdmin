@@ -2,6 +2,7 @@ QcAdmin for PHP
 --
 * QcAdmin 是一个基于 ThinkAdmin 开发的后台管理系统，集成后台系统常用功能。
 * 项目安装及二次开发请参考 ThinkPHP 官方文档及下面的服务环境说明，数据库 sql 文件存放于项目根目录下。
+* demo: http://120.79.23.231 (域名还在备案中)
 > 注意：项目测试请另行搭建环境并创建数据库（数据库配置 application/database.php）, 切勿直接使用测试环境数据！
 
 
@@ -14,7 +15,7 @@ PHP开发技术交流（QQ群 609958778）
 
 Repositorie
 --
- QcAdminAdmin 为开源项目，允许把它用于任何地方，不受任何约束，欢迎 fork 项目。
+ QcAdmin 为开源项目，允许把它用于任何地方，不受任何约束，欢迎 fork 项目。
 >* GitHub 托管地址：https://github.com/lovestack/QcAdmin
 >* OSChina 托管地址：https://gitee.com/yuyulili/QcAdmin
 
@@ -27,7 +28,6 @@ Module
 * `Http`服务组件（原生`CURL`封装，兼容PHP多版本）
 * 微信公众号服务组件（基于[wechat-php-sdk](https://github.com/zoujingli/wechat-php-sdk)，微信网页授权获取用户信息、已关注粉丝管理、自定义菜单管理等等）
 * 微信商户支付服务组件（基于[wechat-php-sdk](https://github.com/zoujingli/wechat-php-sdk)，支持JSAPI支付、扫码模式一支付、扫码模式二支付）
-* 测试公众号名称：思过崖思过 （大家可以关注它来进行简单的测试）
 * 更多组件开发中...
 
 
@@ -98,8 +98,8 @@ server {
 
 Copyright
 --
-* ThinkAdmin 基于`MIT`协议发布，任何人可以用在任何地方，不受约束
-* ThinkAdmin 部分代码来自互联网，若有异议，可以联系作者进行删除
+* QcAdmin 基于`MIT`协议发布，任何人可以用在任何地方，不受约束
+* QcAdmin 部分代码来自互联网，若有异议，可以联系作者进行删除
 
 
 Sponsor
